@@ -4,9 +4,6 @@ using UnityEngine;
 using System;
 using Bolt;
 
-//Doesn't work in editor?
-
-
 public class ServerConsole : Bolt.GlobalEventListener
 {
 #if UNITY_EDITOR_WIN || UNITY_STANDALONE_WIN
@@ -63,18 +60,15 @@ public class ServerConsole : Bolt.GlobalEventListener
     //
     void OnInputText(string obj)
     {
-        Debug.Log("YEET " + obj);
+        Debug.Log("ECHO " + obj);
         //ConsoleSystem.Run(obj, true);
 
         if (obj == "Quit")
         {
             if (BoltNetwork.IsRunning)
             {
-                quitting = true;
-                //System.Console.ForegroundColor = ConsoleColor.White;
+                quitting = true;              
                 BoltNetwork.ShutdownImmediate();
-
-                //BoltNetwork.Shutdown();
 
             }
         }
