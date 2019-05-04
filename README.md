@@ -1,5 +1,5 @@
 # BoltConsoleSample
-Launch your headless build using the batch file in the "Build" folder
+Launch your headless build using the batch file in the "Build" folder  
 https://www.youtube.com/watch?v=U5MEvPAy9Dk&feature=youtu.be
 
 All normal Bolt logs will be printed to the console.
